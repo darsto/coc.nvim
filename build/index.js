@@ -61273,6 +61273,7 @@ class Languages {
                 }
             },
             onCompleteDone: async (vimItem, opt) => {
+                return; /* don't insert full signature on completion selection */
                 let item = completeItems[vimItem.index];
                 if (!item)
                     return;
